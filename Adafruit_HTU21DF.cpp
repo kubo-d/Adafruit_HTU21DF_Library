@@ -48,8 +48,6 @@ Adafruit_HTU21DF::Adafruit_HTU21DF(TwoWire* wire) {
  *         false (0).
  */
 boolean Adafruit_HTU21DF::begin(void) {
-  _wire->begin();
-
   reset();
 
   _wire->beginTransmission(HTU21DF_I2CADDR);
