@@ -35,7 +35,7 @@
  */
 class Adafruit_HTU21DF {
 public:
-  Adafruit_HTU21DF();
+  Adafruit_HTU21DF(TwoWire* wire);
 
   boolean begin(void);
   float readTemperature(void);
@@ -45,6 +45,7 @@ public:
 private:
   boolean readData(void);
   float _last_humidity, _last_temp;
+  TwoWire* _wire;
 };
 
 #endif /* _ADAFRUIT_HTU21DF_H */
